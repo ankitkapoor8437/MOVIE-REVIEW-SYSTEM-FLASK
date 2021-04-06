@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Classification</title> <title>navbarbootstrap</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+  <style>
+
+    h2 {text-align: center;}
+    form { text-align: center;}
+
+
+     div.ex1 {
+  margin: 40px;
+  border: 0px solid black;
+  background-color: ;
+  outline: 2px solid ;
+  outline-offset: 5px;
+}
+
+ div.ex0 {
+  margin: 40px;
+  border: 5px solid black;
+  background-color: ;
+  outline: px solid ;
+  outline-offset: 5px;
+    </style>
+  </head>
+
+
+  <body>
+
+<div class="container">
+  <br>
+<div class="jumbotron" >
+    <h1>MOVIE REVIEW SYSTEM!</h1>
+    <p>Welcome to your Bootstrap Project: Machine Learning Model
+        <br>
+        <p> You will recreate this webpage and an additional Form Page</p>
+        <p>Just follow the instruction steps here to re-create these webpages!</p>
+    <p><a class="btn btn-primary btn-lg" href="https://www.coursera.org/learn/machine-learning-with-python" role="button" >Learn more</a></p>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="jumbotron">
+
+
+
+<h2 ><div class="container">Please enter your movie review:</div></h2>
+
+{% from "_formhelpers.html" import render_field %}
+<div class="container">
+<form method=post action="/results">
+  <dl>
+
+	{{ render_field(form.moviereview, cols='40', rows='5') }}
+
+  </dl>
+  <div>
+	  <input class="btn btn-primary" type=submit value='Submit review' name='submit_btn'>
+
+  </div>
+  <br>
+</form>
+</div>
+    </div>
+</div>
+
+
+<!-- 16:9 aspect ratio -->
+<div class="container">
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Bw6I-KgCSP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </div>
+
+
+
+<br>
+<div class="container">
+    <h1>MOVIES TO WATCH</h1>
+
+
+<div class="container" >
+ <div class="row">
+  <div class="col-xs-4"><img src="{{ movie_image1 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image2 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image3 }}" class="img-responsive" alt="Responsive image"></div>
+
+ </div>
+    </div>
+
+    <div class="container" >
+ <div class="row">
+  <div class="col-xs-4"><img src="{{ movie_image4 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image5 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image6 }}" class="img-responsive" alt="Responsive image"></div>
+
+ </div>
+    </div>
+
+
+        <nav class="navbar navbar-default  navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                  <!--  Code for the hamburger icon-->
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">WELCOME</a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Movies <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Series</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">User Reviews</a></li>
+                      <li><a href="http://www.google.com">Go to Google</a></li>
+                      <li><a href="#">Something else here</a></li>
+
+                      <!-- Use this to separate a new link -->
+
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+             <!-- SEARCH BAR -->
+             <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+       </div>
+</nav>
+
+
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<br>
+    <br>
+<div class="jumbotron">
+    <form class="form-horizontal">
+  <div class="form-group">
+    <p class="text-left"><label for="exampleInputEmail1">Email address</label></p>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <p class="text-left"><label for="exampleInputPassword1">Password</label></p>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <p class="text-left"><label for="exampleInputFile">File input</label></p>
+    <input type="file" id="exampleInputFile">
+  </div>
+
+
+  <div class="checkbox">
+      <p class="text-left">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+      </p>
+  </div>
+
+  <p class="text-left"><button type="submit" class="btn btn-primary">Submit</button> </p>
+
+</form>
+</div>
+    </div>
+
+<br>
+  <br>
+
+  </body>
+</html>
+
+
+<body>
+
+<div class="container">
+<div class="jumbotron">
+<footer class="page-footer bg-dark">
+
+  <div class="bg-success">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+
+        <div class="col-md-12 text-center">
+            <a href="#"><i class="fab fa-facebook-f white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-twitter white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-google-plus-g white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-linkedin-in white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-instagram white-text"> </i></a>
+           </div>
+
+     </div>
+    </div>
+  </div>
+
+  <div class="container text-center text-md-left mt-5">
+    <div class="row">
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Creators</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
+        <p class="mt-2"> ANKIT KAPOOR</p>
+          <p class="mt-2">AYUSHI JAIN</p>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Services</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
+
+         <ul class="list-unstyled">
+            <li class="my-2"><a href="#">Movies</a></li>
+            <li class="my-2"><a href="#">Series</a></li>
+            <li class="my-2"><a href="#">Trailers</a></li>
+            <li class="my-2"> <a href="#">Others</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Useful links</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="#">Home</a></li>
+            <li class="my-2"><a href="#">About</a></li>
+            <li class="my-2"><a href="#">Services</a></li>
+            <li class="my-2"> <a href="#">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Contact</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2"><i class="fas fa-home mr-3"></i> Dwarka, New Delhi, 110078</li>
+            <li class="my-2"><i class="fas fa-envelope mr-3"></i> ankitkapoor8437@gmail.com</li>
+            <li class="my-2"><i class="fas fa-phone mr-3"></i> + 91 999 999 6666</li>
+            <li class="my-2"><i class="fas fa-print mr-3"></i> + 9  999 888 4564</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+    <br>
+    <Br>
+  <div class="footer-copyright text-center py-3">
+    <p>&copy; Copyright
+    <a href="#"></a></p>
+    <p>Designed by Ankit Kapoor</p>
+  </div>
+</footer>
+
+</div>
+    </div>
+
+
+</body>
+</html>

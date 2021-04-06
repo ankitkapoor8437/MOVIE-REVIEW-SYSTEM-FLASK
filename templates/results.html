@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+      <title>Movie Classification</title>
+
+  </head>
+
+
+  <body>
+
+  <br>
+  <br>
+
+
+  <div class="container">
+      <br></br>
+      <div class="jumbotron">
+<h2><div class="container">
+    <div class="jumbotron"></div> Your movie review is: </div>
+    <h2>{{ content }} </h2>
+    <br></br>
+</div></h2>
+
+<h2><div class="jumbotron">Prediction:
+    <br>
+    <br>
+This movie review is <strong>{{ prediction }}</strong>
+	 (probability: {{ probability }}%).
+    <br></br>
+
+</div>
+
+
+<div id='button'>
+	  <form action="/">
+	    <input class="btn btn-primary" type=submit value='Submit another review'>
+	  </form>
+    <br></br>
+</div>
+</h2>
+
+        <!-- 16:9 aspect ratio -->
+<div class="container">
+    <div class="jumbotron">
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe width="120" height="120" src="https://www.youtube.com/embed/Bw6I-KgCSP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </div>
+</div>
+
+        <div class="container">
+    <h1>MOVIES TO WATCH</h1>
+
+
+<div class="container" >
+ <div class="row">
+  <div class="col-xs-4"><img src="{{ movie_image1 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image2 }}" class="img-responsive" alt="Responsive image"></div>
+  <div class="col-xs-4"><img src="{{ movie_image3 }}" class="img-responsive" alt="Responsive image"></div>
+
+ </div>
+    </div>
+
+
+
+
+
+        <nav class="navbar navbar-default  navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                  <!--  Code for the hamburger icon-->
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">WELCOME</a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Movies <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Series</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">User Reviews</a></li>
+                      <li><a href="http://www.google.com">Go to Google</a></li>
+                      <li><a href="#">Something else here</a></li>
+
+                      <!-- Use this to separate a new link -->
+
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+             <!-- SEARCH BAR -->
+             <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+
+
+               </div>
+       </div>
+</nav>
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  </div>
+  </body>
+</html>
+
+
+
+<body>
+
+<div class="container">
+<div class="jumbotron">
+<footer class="page-footer bg-dark">
+
+  <div class="bg-success">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+
+        <div class="col-md-12 text-center">
+            <a href="#"><i class="fab fa-facebook-f white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-twitter white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-google-plus-g white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-linkedin-in white-text mr-4"> </i></a>
+            <a href="#"><i class="fab fa-instagram white-text"> </i></a>
+           </div>
+
+     </div>
+    </div>
+  </div>
+
+  <div class="container text-center text-md-left mt-5">
+    <div class="row">
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Creators</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
+        <p class="mt-2"> ANKIT KAPOOR</p>
+          <p class="mt-2">AYUSHI JAIN</p>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Services</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
+
+         <ul class="list-unstyled">
+            <li class="my-2"><a href="#">Movies</a></li>
+            <li class="my-2"><a href="#">Series</a></li>
+            <li class="my-2"><a href="#">Trailers</a></li>
+            <li class="my-2"> <a href="#">Others</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-2 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Useful links</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="#">Home</a></li>
+            <li class="my-2"><a href="#">About</a></li>
+            <li class="my-2"><a href="#">Services</a></li>
+            <li class="my-2"> <a href="#">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-3 mx-auto mb-4">
+        <h4 class="text-uppercase font-weight-bold">Contact</h4>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+          <ul class="list-unstyled">
+            <li class="my-2"><i class="fas fa-home mr-3"></i> Dwarka, New Delhi, 110078</li>
+            <li class="my-2"><i class="fas fa-envelope mr-3"></i> ankitkapoor8437@gmail.com</li>
+            <li class="my-2"><i class="fas fa-phone mr-3"></i> + 91 999 999 6666</li>
+            <li class="my-2"><i class="fas fa-print mr-3"></i> + 9  999 888 4564</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+    <br>
+    <Br>
+  <div class="footer-copyright text-center py-3">
+    <p>&copy; Copyright
+    <a href="#"></a></p>
+    <p>Designed by Ankit Kapoor</p>
+  </div>
+</footer>
+
+</div>
+    </div>
+
+
+</body>
+</html>
