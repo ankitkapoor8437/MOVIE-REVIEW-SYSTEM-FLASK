@@ -32,31 +32,36 @@ class ReviewForm(Form):
 @app.route('/')
 def index():
     pic1= os.path.join(app.config['UPLOAD_FOLDER'], 'wandavision.jpeg')
-    pic2= os.path.join(app.config['UPLOAD_FOLDER'], 'parasite.jpg')
-    pic3= os.path.join(app.config['UPLOAD_FOLDER'], 'darisyam.jpg')
+    pic2= os.path.join(app.config['UPLOAD_FOLDER'], 'ludo.jpg')
+    pic3= os.path.join(app.config['UPLOAD_FOLDER'], 'karwan.jpg')
     pic4= os.path.join(app.config['UPLOAD_FOLDER'], 'suits.jpg')
     pic5= os.path.join(app.config['UPLOAD_FOLDER'], 'andha.jpg')
-    pic6= os.path.join(app.config['UPLOAD_FOLDER'], 'gangs.jpg')
+    pic6= os.path.join(app.config['UPLOAD_FOLDER'], 'parasite.jpg')
+    pic7= os.path.join(app.config['UPLOAD_FOLDER'], 'falcon.jpg')
+    pic8= os.path.join(app.config['UPLOAD_FOLDER'], 'black.jpg')
+    pic9= os.path.join(app.config['UPLOAD_FOLDER'], 'gangs.jpg')
 
 
     form = ReviewForm(request.form)
-    return render_template('reviewform.html', form=form, movie_image1= pic1, movie_image2= pic2, movie_image3=pic3, movie_image4=pic4, movie_image5=pic5, movie_image6=pic6)
+    return render_template('reviewform.html', form=form, movie_image1= pic1, movie_image2= pic2, movie_image3=pic3, movie_image4=pic4, movie_image5=pic5, movie_image6=pic6, movie_image7=pic7, movie_image8=pic8, movie_image9=pic9)
 
 @app.route('/results', methods=['POST'])
 def results():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'wandavision.jpeg')
-    pic2 = os.path.join(app.config['UPLOAD_FOLDER'], 'parasite.jpg')
-    pic3 = os.path.join(app.config['UPLOAD_FOLDER'], 'darisyam.jpg')
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'], 'ludo.jpg')
+    pic3 = os.path.join(app.config['UPLOAD_FOLDER'], 'karwan.jpg')
     pic4 = os.path.join(app.config['UPLOAD_FOLDER'], 'suits.jpg')
     pic5 = os.path.join(app.config['UPLOAD_FOLDER'], 'andha.jpg')
-    pic6 = os.path.join(app.config['UPLOAD_FOLDER'], 'gangs.jpg')
-
+    pic6 = os.path.join(app.config['UPLOAD_FOLDER'], 'parasite.jpg')
+    pic7 = os.path.join(app.config['UPLOAD_FOLDER'], 'falcon.jpg')
+    pic8 = os.path.join(app.config['UPLOAD_FOLDER'], 'black.jpg')
+    pic9 = os.path.join(app.config['UPLOAD_FOLDER'], 'gangs.jpg')
 
     form = ReviewForm(request.form)
     if request.method == 'POST' and form.validate():
         review = request.form['moviereview']
         y, proba = classify(review)
-        return render_template('results.html',content=review,prediction=y,probability=round(proba*100, 2), movie_image1= pic1, movie_image2= pic2, movie_image3=pic3, movie_image4=pic4, movie_image5=pic5, movie_image6=pic6)
+        return render_template('results.html',content=review,prediction=y,probability=round(proba*100, 2), movie_image1= pic1, movie_image2= pic2, movie_image3=pic3, movie_image4=pic4, movie_image5=pic5, movie_image6=pic6,movie_image7=pic7, movie_image8=pic8, movie_image9=pic9)
     return render_template('reviewform.html', form=form )
 
 
@@ -64,4 +69,3 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 # hello
-# ankitkapoor
