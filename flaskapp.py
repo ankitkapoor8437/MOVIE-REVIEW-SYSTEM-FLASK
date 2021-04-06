@@ -54,7 +54,7 @@ def results():
     pic5 = os.path.join(app.config['UPLOAD_FOLDER'], 'andha.jpg')
     pic6 = os.path.join(app.config['UPLOAD_FOLDER'], 'parasite.jpg')
     pic7 = os.path.join(app.config['UPLOAD_FOLDER'], 'falcon.jpg')
-    pic8 = os.path.join(app.config['UPLOAD_FOLDER'], 'black.jpg')
+    pic8 = os.path.join(app.config['UPLOAD_FOLDER'], 'widow.jpg')
     pic9 = os.path.join(app.config['UPLOAD_FOLDER'], 'gangs.jpg')
 
     form = ReviewForm(request.form)
