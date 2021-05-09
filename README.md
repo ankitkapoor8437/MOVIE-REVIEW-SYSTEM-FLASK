@@ -15,4 +15,4 @@ Please make sure to update tests as appropriate.
 
 Created and Designed by
 
-ANKIT KAPOOR
+ANKIT KAPOOR AND AYUSHI JAIN
