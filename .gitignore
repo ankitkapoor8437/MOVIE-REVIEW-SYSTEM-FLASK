@@ -1,0 +1,19 @@
+# Python environments
+.venv/
+.venv*/
+venv/
+env/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Test and build output
+.pytest_cache/
+.coverage*
+build/
+dist/
+
+# Operating system files
+.DS_Store
